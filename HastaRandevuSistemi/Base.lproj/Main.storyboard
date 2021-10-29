@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="B9I-jL-WcL">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HastaRandevuSistemi" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hastane Randevu Sistemi" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SAD-SX-0UF">
+                                <rect key="frame" x="148.5" y="188" width="117" height="113"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LwZ-MB-dhk">
+                                <rect key="frame" x="125.5" y="381" width="163" height="45.5"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Üye Girişi" cornerStyle="capsule">
+                                    <backgroundConfiguration key="background"/>
+                                    <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="22"/>
+                                    <directionalEdgeInsets key="contentInsets" top="10" leading="30" bottom="10" trailing="30"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="goToLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xHH-Io-bHi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T2g-Ab-fVe">
+                                <rect key="frame" x="135.5" y="456.5" width="143.5" height="45.5"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Kayıt Ol" cornerStyle="capsule">
+                                    <backgroundConfiguration key="background"/>
+                                    <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="22"/>
+                                    <directionalEdgeInsets key="contentInsets" top="10" leading="30" bottom="10" trailing="30"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="goToRegister:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UQP-9v-aC3"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="T2g-Ab-fVe" firstAttribute="top" secondItem="LwZ-MB-dhk" secondAttribute="bottom" constant="30" id="35d-35-4F8"/>
+                            <constraint firstItem="LwZ-MB-dhk" firstAttribute="top" secondItem="SAD-SX-0UF" secondAttribute="bottom" constant="80" id="EWd-mp-IEa"/>
+                            <constraint firstItem="SAD-SX-0UF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="djk-Bq-aSb"/>
+                            <constraint firstItem="SAD-SX-0UF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="he5-1B-ILC"/>
+                            <constraint firstItem="T2g-Ab-fVe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yhp-xk-gWJ"/>
+                            <constraint firstItem="LwZ-MB-dhk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zXh-pH-Xws"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="2eS-Vn-fwq"/>
+                    <connections>
+                        <segue destination="5hs-D5-TEN" kind="show" identifier="goToLogin" id="1vA-yb-MPW"/>
+                        <segue destination="zQ4-v8-jXQ" kind="show" identifier="goToRegister" id="ggf-fM-vp9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="944.92753623188412" y="81.696428571428569"/>
+        </scene>
+        <!--RegisterVC-->
+        <scene sceneID="2NQ-pY-0yB">
+            <objects>
+                <viewController id="zQ4-v8-jXQ" customClass="RegisterVC" customModule="HastaRandevuSistemi" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6hk-aP-20K">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KAYIT OL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dZg-LB-HDE">
+                                <rect key="frame" x="145" y="118" width="124" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ŞİFRE" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oiG-HN-wtv">
+                                <rect key="frame" x="82" y="381" width="250" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="JqC-g3-QHJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HOl-zj-m94">
+                                <rect key="frame" x="128" y="542" width="158" height="46"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="KAYIT OL" cornerStyle="capsule">
+                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="22"/>
+                                    <directionalEdgeInsets key="contentInsets" top="10" leading="30" bottom="10" trailing="30"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="register:" destination="zQ4-v8-jXQ" eventType="touchUpInside" id="3Gh-zT-gzX"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="oSG-4q-Z45">
+                                <rect key="frame" x="82" y="254" width="250" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="vRG-zq-VwH"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="DOKTOR"/>
+                                    <segment title="HASTA"/>
+                                </segments>
+                            </segmentedControl>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="TC KİMLİK NUMARASI" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mfr-zO-7Hc">
+                                <rect key="frame" x="82" y="315" width="250" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="LhY-fB-IMN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="AD SOYAD" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3gb-HG-1dU">
+                                <rect key="frame" x="82" y="446" width="250" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="lbU-wA-67m"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="wo5-rf-qyC"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="3gb-HG-1dU" firstAttribute="top" secondItem="oiG-HN-wtv" secondAttribute="bottom" constant="30" id="3ZB-vp-7pF"/>
+                            <constraint firstItem="oSG-4q-Z45" firstAttribute="top" secondItem="dZg-LB-HDE" secondAttribute="bottom" constant="100" id="3y4-dO-bpa"/>
+                            <constraint firstItem="3gb-HG-1dU" firstAttribute="centerX" secondItem="6hk-aP-20K" secondAttribute="centerX" id="PG5-rH-vR6"/>
+                            <constraint firstItem="dZg-LB-HDE" firstAttribute="centerX" secondItem="6hk-aP-20K" secondAttribute="centerX" id="TqH-BW-l7B"/>
+                            <constraint firstItem="HOl-zj-m94" firstAttribute="top" secondItem="3gb-HG-1dU" secondAttribute="bottom" constant="60" id="dc9-Vm-obV"/>
+                            <constraint firstItem="oiG-HN-wtv" firstAttribute="centerX" secondItem="6hk-aP-20K" secondAttribute="centerX" id="ddh-dm-jVl"/>
+                            <constraint firstItem="HOl-zj-m94" firstAttribute="centerX" secondItem="6hk-aP-20K" secondAttribute="centerX" id="h6L-qk-tSd"/>
+                            <constraint firstItem="oiG-HN-wtv" firstAttribute="top" secondItem="mfr-zO-7Hc" secondAttribute="bottom" constant="30" id="hv2-lz-y4O"/>
+                            <constraint firstItem="mfr-zO-7Hc" firstAttribute="centerX" secondItem="6hk-aP-20K" secondAttribute="centerX" id="lpk-5R-uev"/>
+                            <constraint firstItem="dZg-LB-HDE" firstAttribute="top" secondItem="wo5-rf-qyC" secondAttribute="top" constant="30" id="mrr-Ar-W3f"/>
+                            <constraint firstItem="mfr-zO-7Hc" firstAttribute="top" secondItem="oSG-4q-Z45" secondAttribute="bottom" constant="30" id="qy8-T8-edW"/>
+                            <constraint firstItem="oSG-4q-Z45" firstAttribute="centerX" secondItem="6hk-aP-20K" secondAttribute="centerX" id="ziT-st-8x9"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="wrW-jD-Xi3"/>
+                    <connections>
+                        <outlet property="userIdTF" destination="mfr-zO-7Hc" id="d8X-AC-nUK"/>
+                        <outlet property="userNameTF" destination="3gb-HG-1dU" id="5XE-N4-exU"/>
+                        <outlet property="userPassTF" destination="oiG-HN-wtv" id="HwP-Vf-3Oc"/>
+                        <outlet property="userTypeSC" destination="oSG-4q-Z45" id="jDU-oC-C25"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yhw-Z5-cY8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1766.6666666666667" y="581.91964285714278"/>
+        </scene>
+        <!--LoginVC-->
+        <scene sceneID="N28-dY-O3w">
+            <objects>
+                <viewController id="5hs-D5-TEN" customClass="LoginVC" customModule="HastaRandevuSistemi" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="w18-fx-cVJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ÜYE GİRİŞİ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bw0-7e-XxJ">
+                                <rect key="frame" x="135" y="118" width="144" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="TC KİMLİK NUMARASI" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VVE-Ie-LMq">
+                                <rect key="frame" x="82" y="314" width="250" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="T0s-Vo-vfS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ŞİFRE" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bSz-go-W08">
+                                <rect key="frame" x="82" y="380" width="250" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="g4A-a4-L9r"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c6p-s4-85P">
+                                <rect key="frame" x="111" y="515" width="192.5" height="46"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="OTURUM AÇ" cornerStyle="capsule">
+                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="22"/>
+                                    <directionalEdgeInsets key="contentInsets" top="10" leading="30" bottom="10" trailing="30"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="login:" destination="5hs-D5-TEN" eventType="touchUpInside" id="PEE-fJ-Jb3"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="79o-46-ex9"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bSz-go-W08" firstAttribute="top" secondItem="VVE-Ie-LMq" secondAttribute="bottom" constant="30" id="56Y-na-3mu"/>
+                            <constraint firstItem="bSz-go-W08" firstAttribute="centerX" secondItem="w18-fx-cVJ" secondAttribute="centerX" id="7qj-9i-inN"/>
+                            <constraint firstItem="VVE-Ie-LMq" firstAttribute="centerX" secondItem="w18-fx-cVJ" secondAttribute="centerX" id="8aR-Y3-zt3"/>
+                            <constraint firstItem="bw0-7e-XxJ" firstAttribute="centerX" secondItem="w18-fx-cVJ" secondAttribute="centerX" id="LJw-Jm-0AW"/>
+                            <constraint firstItem="bw0-7e-XxJ" firstAttribute="top" secondItem="79o-46-ex9" secondAttribute="top" constant="30" id="MTr-Ur-Vi2"/>
+                            <constraint firstItem="VVE-Ie-LMq" firstAttribute="top" secondItem="bw0-7e-XxJ" secondAttribute="bottom" constant="160" id="Ma6-a9-7y3"/>
+                            <constraint firstItem="c6p-s4-85P" firstAttribute="top" secondItem="bSz-go-W08" secondAttribute="bottom" constant="100" id="vNP-XA-Lgt"/>
+                            <constraint firstItem="c6p-s4-85P" firstAttribute="centerX" secondItem="w18-fx-cVJ" secondAttribute="centerX" id="yug-fb-XGo"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="3ze-Lb-pzN"/>
+                    <connections>
+                        <outlet property="userIdTF" destination="VVE-Ie-LMq" id="erk-rc-Hio"/>
+                        <outlet property="userPassTF" destination="bSz-go-W08" id="x7T-P8-brH"/>
+                        <segue destination="Ih7-O7-Gsq" kind="show" identifier="goToPatientMain" id="KeM-qN-rtd"/>
+                        <segue destination="2zm-p7-9a3" kind="show" identifier="goToDoctorMain" id="9Hq-bJ-g9i"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Te3-yZ-ilz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1767" y="-219"/>
+        </scene>
+        <!--Merhaba Doktor-->
+        <scene sceneID="MYl-PY-fTY">
+            <objects>
+                <viewController id="2zm-p7-9a3" customClass="DoctorMainVC" customModule="HastaRandevuSistemi" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PfV-qa-ZY4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="4Ti-dr-pWX"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Merhaba Doktor" id="L0N-RU-VFV"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7xU-9G-kcP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2786" y="170"/>
+        </scene>
+        <!--Merhaba Hastamız-->
+        <scene sceneID="6Es-T5-PMO">
+            <objects>
+                <viewController id="Ih7-O7-Gsq" customClass="PatientMainVC" customModule="HastaRandevuSistemi" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4O7-4F-db9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n4B-Or-NHK">
+                                <rect key="frame" x="0.0" y="155" width="414" height="216"/>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lütfen doktor seçiniz:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eD5-L8-CHG">
+                                <rect key="frame" x="16" y="118" width="164.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kjJ-Zc-h3Z">
+                                <rect key="frame" x="49.5" y="491" width="85" height="42"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="08:00">
+                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="24"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="onHourEightClick:" destination="Ih7-O7-Gsq" eventType="touchUpInside" id="cn3-o9-LWJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Obr-Sc-tym">
+                                <rect key="frame" x="164.5" y="491" width="85" height="42"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="09:00">
+                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="24"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="onHourNineClick:" destination="Ih7-O7-Gsq" eventType="touchUpInside" id="OsC-aS-Gfv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aQr-zA-9Sf">
+                                <rect key="frame" x="279.5" y="491" width="85" height="42"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="10:00">
+                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="24"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="onHourTenClick:" destination="Ih7-O7-Gsq" eventType="touchUpInside" id="PN6-CZ-QcP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sY4-Af-3OQ">
+                                <rect key="frame" x="165" y="563" width="84.5" height="42"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="13:00">
+                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="24"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="onHourOneClick:" destination="Ih7-O7-Gsq" eventType="touchUpInside" id="2JH-SZ-S5j"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iz8-Br-OwP">
+                                <rect key="frame" x="279.5" y="563" width="84.5" height="42"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="14:00">
+                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="24"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="onHourTwoClick:" destination="Ih7-O7-Gsq" eventType="touchUpInside" id="LUA-kq-UTx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yay-Xh-R6g">
+                                <rect key="frame" x="50.5" y="635" width="84.5" height="42"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="15:00">
+                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="24"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="onHourThreeClick:" destination="Ih7-O7-Gsq" eventType="touchUpInside" id="2HH-aB-DdY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zm2-tY-tNR">
+                                <rect key="frame" x="165" y="635" width="84.5" height="42"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="16:00">
+                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="24"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="onHourFourClick:" destination="Ih7-O7-Gsq" eventType="touchUpInside" id="59F-x3-idR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Afm-XU-7m2">
+                                <rect key="frame" x="52.5" y="563" width="82.5" height="42"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="11:00">
+                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="24"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="onHourElevenClick:" destination="Ih7-O7-Gsq" eventType="touchUpInside" id="ugR-XK-YIM"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lütfen aşağıdan randevu saati seçiniz:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xQG-Nf-fI9">
+                                <rect key="frame" x="16" y="401" width="290" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="aRj-KC-Wat"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Zm2-tY-tNR" firstAttribute="centerX" secondItem="4O7-4F-db9" secondAttribute="centerX" id="04K-gU-yNc"/>
+                            <constraint firstItem="aQr-zA-9Sf" firstAttribute="leading" secondItem="Obr-Sc-tym" secondAttribute="trailing" constant="30" id="0R9-MV-fUZ"/>
+                            <constraint firstItem="aRj-KC-Wat" firstAttribute="trailing" secondItem="n4B-Or-NHK" secondAttribute="trailing" id="38Z-ya-wfv"/>
+                            <constraint firstItem="sY4-Af-3OQ" firstAttribute="top" secondItem="Obr-Sc-tym" secondAttribute="bottom" constant="30" id="62I-HS-2bK"/>
+                            <constraint firstItem="sY4-Af-3OQ" firstAttribute="leading" secondItem="Afm-XU-7m2" secondAttribute="trailing" constant="30" id="6g3-1Q-YKm"/>
+                            <constraint firstItem="Obr-Sc-tym" firstAttribute="leading" secondItem="kjJ-Zc-h3Z" secondAttribute="trailing" constant="30" id="9Kc-4j-3rM"/>
+                            <constraint firstItem="Afm-XU-7m2" firstAttribute="top" secondItem="kjJ-Zc-h3Z" secondAttribute="bottom" constant="30" id="9dW-4g-BPS"/>
+                            <constraint firstItem="n4B-Or-NHK" firstAttribute="top" secondItem="eD5-L8-CHG" secondAttribute="bottom" constant="16" id="BYD-mi-0XB"/>
+                            <constraint firstItem="sY4-Af-3OQ" firstAttribute="centerX" secondItem="4O7-4F-db9" secondAttribute="centerX" id="Cvu-6A-5yJ"/>
+                            <constraint firstItem="iz8-Br-OwP" firstAttribute="top" secondItem="aQr-zA-9Sf" secondAttribute="bottom" constant="30" id="DZU-9f-6US"/>
+                            <constraint firstItem="Obr-Sc-tym" firstAttribute="top" secondItem="n4B-Or-NHK" secondAttribute="bottom" constant="120" id="ISo-fj-nRZ"/>
+                            <constraint firstItem="eD5-L8-CHG" firstAttribute="top" secondItem="aRj-KC-Wat" secondAttribute="top" constant="30" id="Ibv-2c-LQQ"/>
+                            <constraint firstItem="iz8-Br-OwP" firstAttribute="leading" secondItem="sY4-Af-3OQ" secondAttribute="trailing" constant="30" id="QOx-AN-uNg"/>
+                            <constraint firstItem="Obr-Sc-tym" firstAttribute="centerX" secondItem="4O7-4F-db9" secondAttribute="centerX" id="S8d-GV-iQf"/>
+                            <constraint firstItem="eD5-L8-CHG" firstAttribute="leading" secondItem="aRj-KC-Wat" secondAttribute="leading" constant="16" id="U8f-mY-wOt"/>
+                            <constraint firstItem="xQG-Nf-fI9" firstAttribute="leading" secondItem="aRj-KC-Wat" secondAttribute="leading" constant="16" id="XKA-AX-Mkm"/>
+                            <constraint firstItem="aQr-zA-9Sf" firstAttribute="centerY" secondItem="Obr-Sc-tym" secondAttribute="centerY" id="YZq-1B-EGd"/>
+                            <constraint firstItem="Zm2-tY-tNR" firstAttribute="top" secondItem="sY4-Af-3OQ" secondAttribute="bottom" constant="30" id="Z0k-p7-9g3"/>
+                            <constraint firstItem="n4B-Or-NHK" firstAttribute="leading" secondItem="aRj-KC-Wat" secondAttribute="leading" id="dre-Cv-NUf"/>
+                            <constraint firstItem="n4B-Or-NHK" firstAttribute="centerX" secondItem="4O7-4F-db9" secondAttribute="centerX" id="mkD-Vk-IXK"/>
+                            <constraint firstItem="Obr-Sc-tym" firstAttribute="centerY" secondItem="kjJ-Zc-h3Z" secondAttribute="centerY" id="nam-KT-eCD"/>
+                            <constraint firstItem="Zm2-tY-tNR" firstAttribute="leading" secondItem="Yay-Xh-R6g" secondAttribute="trailing" constant="30" id="rTB-TH-25Q"/>
+                            <constraint firstItem="xQG-Nf-fI9" firstAttribute="top" secondItem="n4B-Or-NHK" secondAttribute="bottom" constant="30" id="t1E-tf-T9t"/>
+                            <constraint firstItem="Yay-Xh-R6g" firstAttribute="top" secondItem="Afm-XU-7m2" secondAttribute="bottom" constant="30" id="txQ-0e-BcC"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Merhaba Hastamız" id="Lcv-5a-XU7"/>
+                    <connections>
+                        <outlet property="doktorSec" destination="n4B-Or-NHK" id="cnO-Ss-QTn"/>
+                        <outlet property="hourEight" destination="kjJ-Zc-h3Z" id="FYd-eg-kn5"/>
+                        <outlet property="hourEleven" destination="Afm-XU-7m2" id="gMq-V1-WMv"/>
+                        <outlet property="hourFour" destination="Zm2-tY-tNR" id="vsM-9E-Edy"/>
+                        <outlet property="hourNine" destination="Obr-Sc-tym" id="YxB-3F-DFD"/>
+                        <outlet property="hourOne" destination="sY4-Af-3OQ" id="kkU-SP-IRR"/>
+                        <outlet property="hourTen" destination="aQr-zA-9Sf" id="LUX-xt-8qR"/>
+                        <outlet property="hourThree" destination="Yay-Xh-R6g" id="Ko8-Wm-yWB"/>
+                        <outlet property="hourTwo" destination="iz8-Br-OwP" id="dlq-Qu-jKq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hio-o2-RVp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2785.507246376812" y="-542.41071428571422"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="NM3-ye-4JJ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="B9I-jL-WcL" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hD7-25-qwc">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="p2E-so-pzA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oPD-He-zZ1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="34.782608695652179" y="81.696428571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

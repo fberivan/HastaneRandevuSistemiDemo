@@ -1,0 +1,6 @@
+framework module Pods_HastaRandevuSistemiTests {
+  umbrella header "Pods-HastaRandevuSistemiTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
